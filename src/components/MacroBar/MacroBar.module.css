@@ -1,0 +1,85 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.label {
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.values {
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.progressContainer {
+  height: 12px;
+  background-color: var(--bg-primary);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  position: relative;
+}
+
+.progressBar {
+  height: 100%;
+  border-radius: var(--radius-sm);
+  transition: width var(--transition-slow) ease-out;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* Macro colors */
+.carbs .progressBar {
+  background: linear-gradient(90deg, #d97706, var(--color-carbs));
+}
+.carbs .label {
+  color: var(--color-carbs);
+}
+
+.protein .progressBar {
+  background: linear-gradient(90deg, #2563eb, var(--color-protein));
+}
+.protein .label {
+  color: var(--color-protein);
+}
+
+.fat .progressBar {
+  background: linear-gradient(90deg, #dc2626, var(--color-fat));
+}
+.fat .label {
+  color: var(--color-fat);
+}
+
+.kcal .progressBar {
+  background: linear-gradient(90deg, #059669, var(--color-kcal));
+}
+.kcal .label {
+  color: var(--color-kcal);
+}
+
+/* When target is exceeded */
+.exceeded .progressContainer {
+  border-color: rgba(239, 68, 68, 0.4);
+}
+.exceeded .progressBar {
+  background: linear-gradient(90deg, #ef4444, #b91c1c) !important;
+}

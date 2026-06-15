@@ -1,0 +1,105 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.remainingRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .remainingRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.remainingCard {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.remainingLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.remainingValue {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.kcalVal { color: var(--color-kcal); }
+.carbVal { color: var(--color-carbs); }
+.protVal { color: var(--color-protein); }
+.fatVal { color: var(--color-fat); }
+
+.suggestionsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.highlightCard {
+  border: 1px solid rgba(16, 185, 129, 0.25) !important;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(15, 22, 36, 0.75)) !important;
+}
+
+.tipCard {
+  padding: 24px;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(255, 255, 255, 0.01));
+  border: 1px solid rgba(245, 158, 11, 0.15);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tipTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-carbs);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tipText {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
